@@ -18,6 +18,12 @@ namespace EmployeeManagementProject.Presentation_Layer.Controllers
             this._mediator = mediator;
         }
 
+        /// <summary>
+        /// Retrieves a list of all employees.
+        /// </summary>
+        /// <returns>
+        /// A List of Employees or an empty list if no employees are found.
+        /// </returns>
         [HttpGet]
         public async Task<List<Employee>> GetEmployeeList()
         {
@@ -25,6 +31,13 @@ namespace EmployeeManagementProject.Presentation_Layer.Controllers
             return employeeList;
         }
 
+        /// <summary>
+        /// Retrieves a specific employee by their unique identifier.
+        /// </summary>
+        /// <param name="id">The unique integer identifier of the employee to retrieve. Must be a positive integer.</param>
+        /// <returns>
+        /// An employee object corresponding to the provided unique identifier, if one exists.
+        /// </returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Employee>> GetEmployee(int id)
         {
@@ -43,6 +56,13 @@ namespace EmployeeManagementProject.Presentation_Layer.Controllers
             return Ok(employee);
         }
 
+        /// <summary>
+        /// Adds an employee to the system.
+        /// </summary>
+        /// <param name="employee">The object containing the details of the employee to be added.</param>
+        /// <returns>
+        /// The newly created object, including its assigned ID.
+        /// </returns>
         [HttpPost]
         public async Task<ActionResult<Employee>> AddEmployee(Employee employee)
         {
@@ -66,6 +86,13 @@ namespace EmployeeManagementProject.Presentation_Layer.Controllers
             return Ok(newEmployee);
         }
 
+        /// <summary>
+        /// Updates the existing employee in the system.
+        /// </summary>
+        /// <param name="employee">The object containing the details of the employee to be updated.</param>
+        /// <returns>
+        /// An integer representing the number of rows affected.
+        /// </returns>
         [HttpPut("{id}")]
         public async Task<ActionResult<int>> UpdateEmployee(Employee employee)
         {
@@ -89,6 +116,13 @@ namespace EmployeeManagementProject.Presentation_Layer.Controllers
             return Ok(updatedEmployee);
         }
 
+        /// <summary>
+        /// Deletes an employee in the system.
+        /// </summary>
+        /// <param name="id">The unique integer identifier of the employee to delete. Must be a positive integer.</param>
+        /// <returns>
+        /// An integer representing the number of rows affected (typically 1 for successful deletion).
+        /// </returns>
         [HttpDelete("{id}")]
         public async Task<ActionResult<int>> DeleteEmployee(int id)
         {
