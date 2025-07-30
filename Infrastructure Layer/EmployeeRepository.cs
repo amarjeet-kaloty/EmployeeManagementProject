@@ -1,5 +1,5 @@
 ﻿using EmployeeManagementProject.Application_Layer.Common;
-using EmployeeManagementProject.Domain_Layer.Entity;
+using EmployeeManagementProject.Domain_Layer.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeManagementProject.Infrastructure_Layer

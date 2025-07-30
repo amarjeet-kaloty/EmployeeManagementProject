@@ -1,11 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace EmployeeManagementProject.Domain_Layer.Entity
+namespace EmployeeManagementProject.Domain_Layer.Entities
 {
-    public class Employee
+    public class Employee : Entity
     {
-        public int Id { get; set; }
-
         [Required(ErrorMessage = "Name is required.")]
         public required string Name { get; set; }
 
@@ -18,5 +16,18 @@ namespace EmployeeManagementProject.Domain_Layer.Entity
 
         [Phone(ErrorMessage = "Invalid phone number format.")]
         public string? Phone { get; set; }
+
+        public Employee() : base()
+        {
+
+        }
+
+        public Employee(string name, string address, string email, string? phone) : base()
+        {
+            Name = name;
+            Address = address;
+            Email = email;
+            Phone = phone;
+        }
     }
 }

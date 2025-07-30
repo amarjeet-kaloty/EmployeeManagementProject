@@ -1,7 +1,7 @@
 ﻿using EmployeeManagementProject.Application_Layer.Command.EmployeeCommands;
 using EmployeeManagementProject.Application_Layer.Common;
 using EmployeeManagementProject.Application_Layer.Query.EmployeeQueries;
-using EmployeeManagementProject.Domain_Layer.Entity;
+using EmployeeManagementProject.Domain_Layer.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

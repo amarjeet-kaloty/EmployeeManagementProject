@@ -1,4 +1,4 @@
-﻿using EmployeeManagementProject.Domain_Layer.Entity;
+﻿using EmployeeManagementProject.Domain_Layer.Entities;
 
 namespace EmployeeManagementProject.Application_Layer.Common
 {
